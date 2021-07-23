@@ -1,4 +1,4 @@
-package com.denireas.turion.Controllers;
+package com.denireas.turion.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
