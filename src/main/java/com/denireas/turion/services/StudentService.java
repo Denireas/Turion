@@ -2,6 +2,7 @@ package com.denireas.turion.services;
 
 import com.denireas.turion.entity.Student;
 import com.denireas.turion.repository.StudentRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -13,26 +14,28 @@ public class StudentService {
 
     private final StudentRepository studentRepository;
 
+    @Autowired
     public StudentService(StudentRepository studentRepository) {
         this.studentRepository = studentRepository;
     }
 
-    private List<Student> getAllStudents() {
+
+    public List<Student> getAllStudents() {
         List<Student> studentList = new ArrayList<>();
         studentRepository.findAll().forEach(studentList::add);
         return studentList;
     }
 
-    private Student getById(Long id) {
+    public Student getById(Long id) {
         Optional<Student> student = studentRepository.findById(id);
         return student.orElse(null);
     }
 
-    private void saveStudent(Student student) {
+    public void saveStudent(Student student) {
         if (student != null) studentRepository.save(student);
     }
 
-    private void updateStudent(Long id, Student newStudent) {
+    public void updateStudent(Long id, Student newStudent) {
         Student student = studentRepository.findById(id).orElse(null);
         if (student != null) {
             student.setName(newStudent.getName());

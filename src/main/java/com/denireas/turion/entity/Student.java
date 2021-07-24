@@ -20,7 +20,7 @@ public class Student {
     @Column(name = "surname")
     private String surname;
 
-    @Column(name = "middleName")
+    @Column(name = "middlename")
     private String middleName;
 
     @Column(name = "birthdate")
