@@ -9,11 +9,16 @@ import java.time.format.DateTimeFormatter;
 @Controller
 public class MainPageController {
 
-    @GetMapping
+    @GetMapping("/")
     public String mainPage() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
         String now = LocalDateTime.now().format(formatter);
         System.out.println("\nСейчас: " + now);
         return "MainPage";
+    }
+
+    @GetMapping("/second")
+    public String secondPage() {
+        return "SecondPage";
     }
 }
