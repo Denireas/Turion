@@ -55,4 +55,6 @@ public class StudentService {
     public void sayHello2() {}
 
     public void sayHello3() {}
+
+    public void sayHello4() {}
 }
