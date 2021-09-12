@@ -51,4 +51,6 @@ public class StudentService {
         System.out.println("Hello!");
         System.out.println("Goodbye");
     }
+
+    public void sayHello2() {}
 }
