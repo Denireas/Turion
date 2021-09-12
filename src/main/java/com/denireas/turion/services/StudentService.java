@@ -46,15 +46,4 @@ public class StudentService {
             studentRepository.save(student);
         }
     }
-
-    public void sayHello() {
-        System.out.println("Hello!");
-        System.out.println("Goodbye");
-    }
-
-    public void sayHello2() {}
-
-    public void sayHello3() {}
-
-    public void sayHello4() {}
 }
